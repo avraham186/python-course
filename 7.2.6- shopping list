@@ -1,0 +1,91 @@
+def shopping_list(my_hsopping_list):
+    sort_sopping_list = my_hsopping_list.split(",")
+    search = 0
+    legal = 0
+    legal_item = []
+    choice = input("""
+    +++++  choose number  +++++
+    1-print product list
+    2-print number of products
+    3-product in the list?
+    4-how meny times product in the list
+    5-delet from list
+    6-add product to the list
+    7-print all products that illigel
+    8-remove all dulicates at the list
+    9-exit""")
+
+    if choice == 1:
+        print sort_sopping_list
+        shopping_list(my_hsopping_list)
+
+    elif choice == 2:
+        tags = len(my_hsopping_list.split(","))
+        print tags
+        shopping_list(my_hsopping_list)
+
+    elif choice == 3:
+        in_list = input('put product for search')
+        for i in sort_sopping_list:
+            if in_list == i:
+                search = search + 1
+        print 'the product', in_list, 'found', search, 'times'
+
+        shopping_list(my_hsopping_list)
+
+    elif choice == 4:
+        count = 0
+        duplicate = input('put product to check')
+        for i in sort_sopping_list:
+            if duplicate == i:
+                count = count + 1
+        print 'the product', duplicate, 'exist', count,'times'
+        shopping_list(my_hsopping_list)
+
+    elif choice == 5:
+        delet = input('put product to delet from list')
+        delet_which = 0
+        for i in sort_sopping_list:
+            if i == delet and delet_which == 0:
+                sort_sopping_list.remove(delet)
+                delet_which = delet_which + 1
+        print 'the item', delet, 'removed from list'
+        print sort_sopping_list
+        shopping_list(my_hsopping_list)
+
+    elif choice == 6:
+        product_add = input('put name of product you want to add to the list')
+        sort_sopping_list.append(product_add)
+        print sort_sopping_list
+        shopping_list(my_hsopping_list)
+
+    elif choice == 7:
+        for i in sort_sopping_list:
+            if len(i) < 3 and (i.isupper(False)) and (i.islower(False)):
+                legal = legal + 1
+                legal_item.append(i)
+            else:
+                legal = legal + 0
+        if legal > 0:
+            print 'illegal item'
+            print legal_item
+        else:
+            print 'all good'
+        shopping_list(my_hsopping_list)
+
+    elif choice == 8:
+        exist = []
+        print sort_sopping_list
+        for i in sort_sopping_list:
+            if i not in exist:
+                exist.append(i)
+        sort_sopping_list = exist
+        print sort_sopping_list
+        shopping_list(my_hsopping_list)
+
+    else:
+        return 'thank you for using our app'
+
+sopping_list1 = "milk,cottage,tomatos,avocado,milk"
+a = shopping_list(sopping_list1)
+print a

@@ -1,0 +1,43 @@
+התוכנית שלכם תכלול את הפונקציה
+func
+ואת התיעוד שלה, 
+וכן קריאה לפונקציה 
+help 
+להצגת התיעוד של הפונקציה
+func.
+הקפידו לכתוב את התיעוד בהתאמה למבנה 
+שמוצג בפרק בנושא 
+"תיעוד פונקציה".
+הקפידו על כתיבת הקוד (בתרגיל זה וגם בתרגילי כתיבת הקוד מעתה והלאה) במבנה הבא:
+def main():
+    # Call the function func
+
+if __name__ == "__main__": 
+    main()
+במידת הצורך חזרו על הנושא בפרק שעוסק בפונקציה
+main.
+
+
+
+
+
+def func(num1, num2):
+    """the function recive 2 nums and return num1 multple num2
+    param: num1: first numbre
+    param: num2: second number
+    type: num1: int
+    type: num2: int
+    return: the result of num1 multiplied by num2
+    rtype: int
+    """
+    multiple = num1 * num2
+    return multiple
+def main():
+    if __name__ == '__main__':
+        func(0, 0)
+    main()
+
+a = 2
+b = 5
+answer = func(a, b)
+print answer

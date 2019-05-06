@@ -1,0 +1,10 @@
+הפונקציה מקבלת שתי רשימות המכילות איברים מהטיפוסים
+int ו-float בלבד.
+הפונקציה מחזירה אמת 
+אם שתי הרשימות מכילות בדיוק
+את אותם האיברים (גם אם בסדר שונה)
+אחרת, הפונקציה מחזירה שקר
+
+def are_lists_equal(list1, list2):
+    result =  all(elem in list1  for elem in list2)
+    return result

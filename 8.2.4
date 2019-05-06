@@ -1,0 +1,46 @@
+from collections import Counter
+def sort_anagram(list_of_strings):
+    anagram = []
+    not_anagram = []
+    sorted_anagram = []
+    arr1 = []
+    arr2 = []
+    arr3 = []
+    for i in list_of_strings:
+        check = sorted(i)
+        for i in list_of_strings:
+            if (check == sorted(i)) == True:
+                # if not anagram.__contains__ (list(i)):
+                if not i in anagram:
+                  anagram.append(i)
+            else:
+                not_anagram.append(i)
+        #sorted_anagram  = sorted_anagram +[anagram]
+        #sorted_anagram = list(anagram)
+    for word in list_of_strings:
+        for word2 in list_of_strings:
+            if sorted(word) == sorted(word2):
+                arr1.append(word2)
+            if sorted(arr1[0]) != sorted(word2):
+                arr2.append(word2)
+    print arr1
+    print arr2
+    return anagram
+
+    #return sorted_anagram
+list_of_words = ['deltas', 'retainers', 'desalt', 'pants', 'slated', 'generating', 'ternaries', 'smelters', 'termless', 'salted', 'staled', 'greatening', 'lasted', 'resmelts']
+print sort_anagram(list_of_words)
+
+
+'''
+arr1 = [1, 2, 3, 4]
+arr3 = [1, 2, 3, 4]
+
+arr2 = []
+
+arr2.append(arr1)
+
+arr2.append(arr3)
+
+print arr2
+'''

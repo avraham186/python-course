@@ -1,0 +1,15 @@
+הפונקציה מקבלת רשימת מחרוזות באורך זוגי
+הפונקציה מחזירה מחרוזת המכילה את איברי הרשימה 
+במיקומים הזוגיים
+מופרדים בפסיק ורווח
+בנוסף הפונקציה תחזיר 
+את האיבר באחרון עם הכיתוב 
+and 
+לפניו
+
+def format_list(my_list):
+    zoogy1 =my_list[0::2]
+    and_last = 'and ' + my_list[-1]
+    zoogy1.append(and_last)
+    zoogy2 = str(zoogy1).replace("'", "")
+    return zoogy2

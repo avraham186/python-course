@@ -1,0 +1,15 @@
+def show_hidden_word(secret_word, old_letter_guess):
+    result = []
+    for i in secret_word:
+        if i in old_letter_guess:
+            result.append(i)
+        else:
+            result.append("_")
+    result = str(result).replace("'", " ")
+    result = str(result).replace(",", " ")
+    return result
+
+
+secret_word = "mammals"
+old_letters_guess = ['s', 'p', 'j', 'i', 'm', 'k']
+print show_hidden_word(secret_word, old_letters_guess)

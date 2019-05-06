@@ -1,0 +1,12 @@
+def seven_boom(and_number):
+    result = []
+    and_number = and_number + 1
+    number = range(0, and_number)
+    for i in number:
+        if (i % 7) == 0 or str('7') in str(i):
+            boom = result.append('boom')
+        else:
+            not_boom = result.append(i)
+    return result
+a = seven_boom(17)
+print a

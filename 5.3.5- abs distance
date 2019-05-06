@@ -1,0 +1,44 @@
+
+הפונקציה מקבלת שלושה מספרים שלמים: num1, num2, num3.
+
+הפונקציה מחזירה אמת (True) אם מתקיימים שני התנאים:
+1)
+אחד מהמספרים num2 או num3 "קרוב" ל-num1. "קרוב" = מרחק אבסולוטי 1.
+2)
+אחד מהמספרים num2 או num3 "רחוק" משני המספרים האחרים. "רחוק" = מרחק אבסולוטי 2 ומעלה.
+
+
+
+def distance(num1, num2, num3):
+    num1 = abs(num1)
+    num2 = abs(num2)
+    num3 = abs(num3)
+    if ((num1+1) == num2) or ((num1+1) == num3):
+        plus = True
+    else:
+        if ((num1-1) == num2) or ((num1-1) == num3):
+            plus = True
+        else:
+            plus = False
+
+    if num2 > (num3+2) or num2 < (num3-2) or num2 > (num1+2) or num2 < (num1-2):
+        minus = True
+    else:
+        minus = False
+
+    if num3 > (num1+2) or num3 < (num1-2) or num3 > (num2+2) or num3 < (num2-2):
+        three = True
+    else:
+        three = False
+
+    if plus == True and minus == True and three == True:
+        return True
+    else:
+        return False
+
+
+a = distance(1, 2, 10)
+print a
+
+b = distance(4, 5, 3)
+print b

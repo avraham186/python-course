@@ -1,0 +1,17 @@
+import itertools
+def multi_tuple(tuple1, tuple2):
+    sort_tuple1 = list(tuple1)
+    sort_tuple2 = list(tuple2)
+    sort_tuple = list()
+    for i in sort_tuple1:
+        if i not in sort_tuple:
+            sort_tuple.append(i)
+
+    for i in sort_tuple2:
+        if i not in sort_tuple:
+            sort_tuple.append(i)
+    print sort_tuple
+    print list(itertools.permutations(sort_tuple,2))
+first_tuple = (1, 2, 3)
+second_tuple = (4, 5, 6)
+print multi_tuple(first_tuple, second_tuple)

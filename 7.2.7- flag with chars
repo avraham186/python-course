@@ -1,0 +1,12 @@
+def arrow(my_char, max_length):
+    count = 0
+    for i in range(max_length /2):
+        print my_char * count
+        count = count + 1
+
+    for i in range(count):
+        print my_char * count
+        count = count - 1
+    return ""
+
+print arrow('*', 25)

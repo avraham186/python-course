@@ -1,0 +1,13 @@
+def last_early(my_str):
+    if my_str[-1] in my_str[:-1]:
+        print True
+    else:
+        print False
+
+last_early("happy birthday")
+
+last_early("best of luck")
+
+last_early("wow")
+
+last_early("X")

@@ -1,0 +1,14 @@
+def try_update_letter_guess(letter_guessed, old_letters_guessed):
+    if old_letters_guessed.__contains__(letter_guessed) :
+        print 'X'
+        str(old_letters_guessed).lower()
+        old1 = str(old_letters_guessed).replace(',', '->')
+        old2 = str(old1).replace("'", " ")
+        print False
+        print old2
+    else:
+        letter_guessed = str(letter_guessed.lower())
+        old_letters_guessed += letter_guessed
+        print guess.lower()
+        print tav * length
+        return old_letters_guessed

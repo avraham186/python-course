@@ -1,0 +1,4 @@
+data = ("self", "py", 1.543)
+num = '{:.1f}'.format(data[2])
+format_string = "Hallo", "learner you only have", "units left before you master the course."
+print '{0} {1}.{2} {3} {4} {5}' .format(format_string[0], data[0], data[1], format_string[1], num, format_string[2])

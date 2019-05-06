@@ -1,0 +1,6 @@
+הפונקציה מקבלת רשימה המורכבת ממחרוזות ומחזירה את המחרוזת הארוכה ביותר
+
+def longest(my_list):
+    check = sorted(my_list, key=len)
+    result = check[-1]
+    return result

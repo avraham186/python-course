@@ -1,0 +1,5 @@
+import operator
+def sort_prices(list_of_tuples):
+        price = sorted(list_of_tuples)
+        sort_values = sorted(price, key=operator.itemgetter(1), reverse=True)
+        print sort_values

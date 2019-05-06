@@ -1,0 +1,18 @@
+import calendar
+date = raw_input('put date in format DD/MM/YYYY')
+day, month, year = map(int, date.split('/'))
+day_in_week = calendar.weekday(year, month, day)
+if day_in_week == 0:
+    print 'monday'
+elif day_in_week == 1:
+    print 'tusday'
+elif day_in_week == 2:
+    print 'wednesday'
+elif day_in_week == 3:
+    print 'thursday'
+elif day_in_week == 4:
+    print 'friday'
+elif day_in_week == 5:
+    print 'saterday'
+elif day_in_week == 6:
+    print 'sunday'

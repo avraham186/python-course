@@ -1,0 +1,22 @@
+כתבו פונקציה שנקראת
+shift_left.
+הפונקציה מקבלת רשימה באורך 3 ומחזירה רשימה חדשה מוזזת צעד אחד שמאלה
+
+
+
+
+
+def shift_left(my_list):
+    print my_list
+    the_last =list(my_list[-1])
+    print the_last
+    the_rest = my_list[:-1]
+    print the_rest
+    result = the_last + the_rest
+    print result
+    print type(the_rest)
+    print type(the_last)
+
+test_list = ['a', 'b', 'c', 'd', 'e']
+a = shift_left(test_list)
+print a

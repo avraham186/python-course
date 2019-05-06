@@ -1,0 +1,14 @@
+def squared_numbers(start, stop):
+    count = start
+    result = []
+    while count <= stop:
+        squar = count ** 2
+        count += 1
+        result.append(squar)
+    return result
+a = squared_numbers(4, 8)
+b = squared_numbers(-3, 3)
+print a
+print b
+
+
