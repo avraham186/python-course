@@ -1,0 +1,49 @@
+הפונקציה מחזירה ערך בוליאני המייצג את תקינות המחרוזת והאם 
+המשתמש כבר ניחש את התו בעבר.
+הפונקציה מחזירה שקר 
+(False, מחרוזת שאינה תקינה) 
+במקרים הבאים:
+אם המחרוזת 
+letter_guessed מורכבת משני תווים ומעלה
+אם המחרוזת 
+letter_guessed מכילה סימן שאינו אות אנגלית (כמו: &, *)
+אם המחרוזת 
+letter_guessed 
+היא תו שכבר נמצא ברשימה 
+old_letters_guessed
+(כלומר, ניחשו את התו הזה בעבר ולכן לא חוקי לנחש אותו שוב)
+הפונקציה מחזירה אמת 
+(True, תו תקין) 
+אם המחרוזת letter_guessed 
+מורכבת מתו אחד בלבד שהוא אות אנגלית (ולא סימן אחר)
+שאינו נמצא ברשימה old_letters_guessed
+(כלומר, לא ניחשו את התו הזה בעבר).
+
+
+def check_valid_input(letter_guessed, old_letters_guessed):
+        if len(letter_guessed) == 1:
+            check = True
+        else:
+            check = False
+
+        if letter_guessed.islower():
+            check1 = True
+        else:
+            check1 = False
+
+        if (check == True) and (check1 == True):
+            guess = True
+        else:
+            guess = False
+
+        if letter_guessed in old_letters_guessed:
+            guess1 = False
+        else:
+            guess1 = True
+
+        if (guess == True) and (guess1 == True):
+            return True
+        else:
+            return False
+
+

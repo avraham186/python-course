@@ -1,0 +1,6 @@
+def check_win(secret_word, old_letters_guessed):
+    for i in secret_word:
+        if i in old_letters_guessed:
+            return True
+        else:
+            return False

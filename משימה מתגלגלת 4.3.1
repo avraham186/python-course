@@ -1,0 +1,61 @@
+import string
+HANGMAN_ASCII_ART = """
+  _    _
+ | |  | |
+ | |__| | __ _ _ __   __ _ _ __ ___   __ _ _ __
+ |  __  |/ _` | '_ \ / _` | '_ ` _ \ / _` | '_ \\
+ | |  | | (_| | | | | (_| | | | | | | (_| | | | |
+ |_|  |_|\__,_|_| |_|\__, |_| |_| |_|\__,_|_| |_|
+                      __/ |
+                     |___/ """
+
+MAX_TRIES = 6
+
+print HANGMAN_ASCII_ART
+print ".............................................................................."
+print ".............................................................................."
+print ".............................................................................."
+print ".............................................................................."
+
+print 'you have', MAX_TRIES, 'tries'
+#start screen
+guess = input('put letter')
+length = len(guess)
+check = 0
+tav = '_'
+
+if len(guess) > 1:
+    check = 1
+else:
+    check = 0
+
+
+if guess.isupper() or guess.islower():
+    check1 = 0
+else:
+    check1 = 2
+
+
+if (check == 1) and (check1 == 2):
+    last_check = 3
+else:
+    last_check = 0
+
+
+if last_check == 3:
+    print 'E3'
+
+
+else:
+    if check1 == 2:
+        print 'E2'
+
+    else:
+        if check == 1:
+            print 'E1'
+
+        else:
+            print '.'
+
+print guess.lower()
+print tav * length
